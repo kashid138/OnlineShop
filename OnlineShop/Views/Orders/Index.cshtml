@@ -1,0 +1,101 @@
+﻿@model IEnumerable<OnlineShop.Models.TOrder>
+
+@{
+    ViewBag.Title = "Orders";
+}
+<h2>List Of Orders</h2>
+
+<table class="table table-striped table-bordered" id="datatable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.sTNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dtTrans)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nTaxAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nDeliveryCharges)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dtDeliveryDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dtCancel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sCancel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MPayStatu.sPaymentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MProduct.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MUser.UserName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.sTNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dtTrans)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nQty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nTaxAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nDeliveryCharges)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dtDeliveryDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dtCancel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sCancel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MPayStatu.sPaymentType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MProduct.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MUser.UserName)
+            </td>
+            <td>
+                <button class="btn btn-danger editCustomer glyphicon glyphicon-remove" id="@item.nTId" data-details="Delete" data-controller="Orders">Delete</button>
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,56 @@
+﻿@model OnlineShop.Models.MProduct
+@{
+    Layout = null;
+}
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductDescription)
+        </dd>
+
+        <dt>
+
+            @Html.DisplayNameFor(model => model.ProductQty)
+        </dt>
+
+        <dd>
+            @if (Convert.ToDouble(Model.ProductQty) > 0)
+            {
+                <h4 class="border-success">Available in Stock</h4>
+            }
+            else
+            {
+                <h4 class="border-danger">Out of Stock</h4>
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductImageDecs)
+        </dt>
+
+        <dd>
+            <img src="~/Uploads/@Model.ProductImageDecs" height="100" width="100" />
+        </dd>
+        # @Html.DisplayFor(model => model.MBrand.BrandTypeName) #@Html.DisplayFor(model => model.MProductType.ProductTypeName)
+    </dl>
+</div>

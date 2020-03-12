@@ -1,0 +1,26 @@
+﻿@model IEnumerable<OnlineShop.Models.TCart>
+
+@{
+    ViewBag.Title = "Cart";
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MProduct.ProductName)
+        </th>
+        <th>Action</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MProduct.ProductName)
+        </td>
+        <td>
+            <button class="btn btn-primary editCustomer" data-details="Create" id="@item.nProductId" data-controller="Orders" data-qty="@item.nProductId">Book Now</button>
+            <button class="btn btn-warning editCustomer" data-details="Details" id="@item.nProductId" data-controller="Product">Details</button>
+        </td>
+    </tr>
+}
+
+</table>

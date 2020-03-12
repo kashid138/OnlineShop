@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="princeshopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MBrand">
+    <Key>
+      <PropertyRef Name="MB_id" />
+    </Key>
+    <Property Name="MB_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BrandTypeName" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="BrandImageDesc" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mcity">
+    <Key>
+      <PropertyRef Name="nCityID" />
+    </Key>
+    <Property Name="nCityID" Type="int" Nullable="false" />
+    <Property Name="sCity" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="nStateID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mclient">
+    <Key>
+      <PropertyRef Name="MC_id" />
+    </Key>
+    <Property Name="MC_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MU_id" Type="int" Nullable="false" />
+    <Property Name="CustomerFname" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="CustoemrLname" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="AlternateNumber" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="PermanentAddress1" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="PerrmanentAddress2" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="PermanentAddress3" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Staus" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MPayStatus">
+    <Key>
+      <PropertyRef Name="nPaymentTypeID" />
+    </Key>
+    <Property Name="nPaymentTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sPaymentType" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MProduct">
+    <Key>
+      <PropertyRef Name="MP_id" />
+    </Key>
+    <Property Name="MP_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MPT_id" Type="int" Nullable="false" />
+    <Property Name="MBt_id" Type="int" Nullable="false" />
+    <Property Name="ProductName" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="ProductDescription" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="ProductQty" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+    <Property Name="MinProductQty" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+    <Property Name="ProductPrice" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+    <Property Name="ProductImageDecs" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MProductType">
+    <Key>
+      <PropertyRef Name="MPT_id" />
+    </Key>
+    <Property Name="MPT_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductTypeName" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mstates">
+    <Key>
+      <PropertyRef Name="nStateID" />
+    </Key>
+    <Property Name="nStateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sState" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MSupplierProductMap">
+    <Key>
+      <PropertyRef Name="nmap_id" />
+    </Key>
+    <Property Name="nmap_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MS_id" Type="int" Nullable="false" />
+    <Property Name="MP_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MSuppliers">
+    <Key>
+      <PropertyRef Name="MS_id" />
+    </Key>
+    <Property Name="MS_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplierName" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="SupplierAddress1" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="SupplierAddress2" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="SupplierAddress3" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="SupplierCity" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Pincode" Type="int" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MUsers">
+    <Key>
+      <PropertyRef Name="MU_id" />
+    </Key>
+    <Property Name="MU_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="UserEmail" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="UserPwd" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="MUT_id" Type="int" Nullable="false" />
+    <Property Name="JoinDate" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MUserType">
+    <Key>
+      <PropertyRef Name="MUT_id" />
+    </Key>
+    <Property Name="MUT_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserTypeName" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MWarehouse">
+    <Key>
+      <PropertyRef Name="MW_ID" />
+    </Key>
+    <Property Name="MW_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WarehouseName" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="WarehouseAddress1" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="WarehouseAddress2" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="WarehouseAddress3" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="nCityID" Type="int" Nullable="false" />
+    <Property Name="nStateID" Type="int" Nullable="false" />
+    <Property Name="Pincode" Type="int" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TCart">
+    <Key>
+      <PropertyRef Name="nCartId" />
+    </Key>
+    <Property Name="nCartId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nUserId" Type="int" Nullable="false" />
+    <Property Name="nProductId" Type="int" Nullable="false" />
+    <Property Name="bstatus" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TOrderAllocation">
+    <Key>
+      <PropertyRef Name="nProcessOrderID" />
+    </Key>
+    <Property Name="nProcessOrderID" Type="int" Nullable="false" />
+    <Property Name="nOrderID" Type="int" Nullable="false" />
+    <Property Name="nWarehouseID" Type="int" Nullable="false" />
+    <Property Name="nClientID" Type="int" Nullable="false" />
+    <Property Name="nSupplierID" Type="int" Nullable="false" />
+    <Property Name="bStatus" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TOrders">
+    <Key>
+      <PropertyRef Name="nTId" />
+    </Key>
+    <Property Name="nTId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sTNo" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="dtTrans" Type="date" Nullable="false" />
+    <Property Name="nUserID" Type="int" Nullable="false" />
+    <Property Name="nProdutID" Type="int" Nullable="false" />
+    <Property Name="nQty" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+    <Property Name="nAmount" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+    <Property Name="nTaxAmount" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+    <Property Name="nDeliveryCharges" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+    <Property Name="dtDeliveryDate" Type="date" Nullable="false" />
+    <Property Name="nPaytype" Type="int" Nullable="false" />
+    <Property Name="dtCancel" Type="date" />
+    <Property Name="sCancel" Type="varchar" MaxLength="10" />
+    <Property Name="bStatus" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TProductQty">
+    <Key>
+      <PropertyRef Name="nProductQtyID" />
+    </Key>
+    <Property Name="nProductQtyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nProductID" Type="int" Nullable="false" />
+    <Property Name="nProductQty" Type="float" Nullable="false" />
+    <Property Name="nWarehouseID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_mcity_mstates">
+    <End Role="Mstates" Type="Self.Mstates" Multiplicity="1" />
+    <End Role="Mcity" Type="Self.Mcity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mstates">
+        <PropertyRef Name="nStateID" />
+      </Principal>
+      <Dependent Role="Mcity">
+        <PropertyRef Name="nStateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mclient_MUsers">
+    <End Role="MUsers" Type="Self.MUsers" Multiplicity="1" />
+    <End Role="Mclient" Type="Self.Mclient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUsers">
+        <PropertyRef Name="MU_id" />
+      </Principal>
+      <Dependent Role="Mclient">
+        <PropertyRef Name="MU_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MProduct_MBrand">
+    <End Role="MBrand" Type="Self.MBrand" Multiplicity="1" />
+    <End Role="MProduct" Type="Self.MProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MBrand">
+        <PropertyRef Name="MB_id" />
+      </Principal>
+      <Dependent Role="MProduct">
+        <PropertyRef Name="MBt_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MProduct_MProductType">
+    <End Role="MProductType" Type="Self.MProductType" Multiplicity="1" />
+    <End Role="MProduct" Type="Self.MProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MProductType">
+        <PropertyRef Name="MPT_id" />
+      </Principal>
+      <Dependent Role="MProduct">
+        <PropertyRef Name="MPT_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MSupplierProductMap_MProduct">
+    <End Role="MProduct" Type="Self.MProduct" Multiplicity="1" />
+    <End Role="MSupplierProductMap" Type="Self.MSupplierProductMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MProduct">
+        <PropertyRef Name="MP_id" />
+      </Principal>
+      <Dependent Role="MSupplierProductMap">
+        <PropertyRef Name="MP_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MSupplierProductMap_MSuppliers">
+    <End Role="MSuppliers" Type="Self.MSuppliers" Multiplicity="1" />
+    <End Role="MSupplierProductMap" Type="Self.MSupplierProductMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MSuppliers">
+        <PropertyRef Name="MS_id" />
+      </Principal>
+      <Dependent Role="MSupplierProductMap">
+        <PropertyRef Name="MS_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MUsers_MUserType">
+    <End Role="MUserType" Type="Self.MUserType" Multiplicity="1" />
+    <End Role="MUsers" Type="Self.MUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUserType">
+        <PropertyRef Name="MUT_id" />
+      </Principal>
+      <Dependent Role="MUsers">
+        <PropertyRef Name="MUT_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MWarehouse_Mcity">
+    <End Role="Mcity" Type="Self.Mcity" Multiplicity="1" />
+    <End Role="MWarehouse" Type="Self.MWarehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mcity">
+        <PropertyRef Name="nCityID" />
+      </Principal>
+      <Dependent Role="MWarehouse">
+        <PropertyRef Name="nCityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MWarehouse_Mstates">
+    <End Role="Mstates" Type="Self.Mstates" Multiplicity="1" />
+    <End Role="MWarehouse" Type="Self.MWarehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mstates">
+        <PropertyRef Name="nStateID" />
+      </Principal>
+      <Dependent Role="MWarehouse">
+        <PropertyRef Name="nStateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TCart_MProduct">
+    <End Role="MProduct" Type="Self.MProduct" Multiplicity="1" />
+    <End Role="TCart" Type="Self.TCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MProduct">
+        <PropertyRef Name="MP_id" />
+      </Principal>
+      <Dependent Role="TCart">
+        <PropertyRef Name="nProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TCart_MUsers">
+    <End Role="MUsers" Type="Self.MUsers" Multiplicity="1" />
+    <End Role="TCart" Type="Self.TCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUsers">
+        <PropertyRef Name="MU_id" />
+      </Principal>
+      <Dependent Role="TCart">
+        <PropertyRef Name="nUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TOrderAllocation_Mclient">
+    <End Role="Mclient" Type="Self.Mclient" Multiplicity="1" />
+    <End Role="TOrderAllocation" Type="Self.TOrderAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mclient">
+        <PropertyRef Name="MC_id" />
+      </Principal>
+      <Dependent Role="TOrderAllocation">
+        <PropertyRef Name="nClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TOrderAllocation_MSuppliers">
+    <End Role="MSuppliers" Type="Self.MSuppliers" Multiplicity="1" />
+    <End Role="TOrderAllocation" Type="Self.TOrderAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MSuppliers">
+        <PropertyRef Name="MS_id" />
+      </Principal>
+      <Dependent Role="TOrderAllocation">
+        <PropertyRef Name="nSupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TOrderAllocation_MWarehouse">
+    <End Role="MWarehouse" Type="Self.MWarehouse" Multiplicity="1" />
+    <End Role="TOrderAllocation" Type="Self.TOrderAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MWarehouse">
+        <PropertyRef Name="MW_ID" />
+      </Principal>
+      <Dependent Role="TOrderAllocation">
+        <PropertyRef Name="nWarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TOrderAllocation_TOrders">
+    <End Role="TOrders" Type="Self.TOrders" Multiplicity="1" />
+    <End Role="TOrderAllocation" Type="Self.TOrderAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TOrders">
+        <PropertyRef Name="nTId" />
+      </Principal>
+      <Dependent Role="TOrderAllocation">
+        <PropertyRef Name="nOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TOrders_MPayStatus">
+    <End Role="MPayStatus" Type="Self.MPayStatus" Multiplicity="1" />
+    <End Role="TOrders" Type="Self.TOrders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MPayStatus">
+        <PropertyRef Name="nPaymentTypeID" />
+      </Principal>
+      <Dependent Role="TOrders">
+        <PropertyRef Name="nPaytype" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TOrders_MProduct">
+    <End Role="MProduct" Type="Self.MProduct" Multiplicity="1" />
+    <End Role="TOrders" Type="Self.TOrders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MProduct">
+        <PropertyRef Name="MP_id" />
+      </Principal>
+      <Dependent Role="TOrders">
+        <PropertyRef Name="nProdutID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TOrders_MUsers">
+    <End Role="MUsers" Type="Self.MUsers" Multiplicity="1" />
+    <End Role="TOrders" Type="Self.TOrders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUsers">
+        <PropertyRef Name="MU_id" />
+      </Principal>
+      <Dependent Role="TOrders">
+        <PropertyRef Name="nUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="princeshopModelStoreContainer">
+    <EntitySet Name="MBrand" EntityType="Self.MBrand" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mcity" EntityType="Self.Mcity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mclient" EntityType="Self.Mclient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MPayStatus" EntityType="Self.MPayStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MProduct" EntityType="Self.MProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MProductType" EntityType="Self.MProductType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mstates" EntityType="Self.Mstates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MSupplierProductMap" EntityType="Self.MSupplierProductMap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MSuppliers" EntityType="Self.MSuppliers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MUsers" EntityType="Self.MUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MUserType" EntityType="Self.MUserType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MWarehouse" EntityType="Self.MWarehouse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TCart" EntityType="Self.TCart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TOrderAllocation" EntityType="Self.TOrderAllocation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TOrders" EntityType="Self.TOrders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TProductQty" EntityType="Self.TProductQty" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_mcity_mstates" Association="Self.FK_mcity_mstates">
+      <End Role="Mstates" EntitySet="Mstates" />
+      <End Role="Mcity" EntitySet="Mcity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mclient_MUsers" Association="Self.FK_Mclient_MUsers">
+      <End Role="MUsers" EntitySet="MUsers" />
+      <End Role="Mclient" EntitySet="Mclient" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MProduct_MBrand" Association="Self.FK_MProduct_MBrand">
+      <End Role="MBrand" EntitySet="MBrand" />
+      <End Role="MProduct" EntitySet="MProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MProduct_MProductType" Association="Self.FK_MProduct_MProductType">
+      <End Role="MProductType" EntitySet="MProductType" />
+      <End Role="MProduct" EntitySet="MProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MSupplierProductMap_MProduct" Association="Self.FK_MSupplierProductMap_MProduct">
+      <End Role="MProduct" EntitySet="MProduct" />
+      <End Role="MSupplierProductMap" EntitySet="MSupplierProductMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MSupplierProductMap_MSuppliers" Association="Self.FK_MSupplierProductMap_MSuppliers">
+      <End Role="MSuppliers" EntitySet="MSuppliers" />
+      <End Role="MSupplierProductMap" EntitySet="MSupplierProductMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MUsers_MUserType" Association="Self.FK_MUsers_MUserType">
+      <End Role="MUserType" EntitySet="MUserType" />
+      <End Role="MUsers" EntitySet="MUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MWarehouse_Mcity" Association="Self.FK_MWarehouse_Mcity">
+      <End Role="Mcity" EntitySet="Mcity" />
+      <End Role="MWarehouse" EntitySet="MWarehouse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MWarehouse_Mstates" Association="Self.FK_MWarehouse_Mstates">
+      <End Role="Mstates" EntitySet="Mstates" />
+      <End Role="MWarehouse" EntitySet="MWarehouse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TCart_MProduct" Association="Self.FK_TCart_MProduct">
+      <End Role="MProduct" EntitySet="MProduct" />
+      <End Role="TCart" EntitySet="TCart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TCart_MUsers" Association="Self.FK_TCart_MUsers">
+      <End Role="MUsers" EntitySet="MUsers" />
+      <End Role="TCart" EntitySet="TCart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TOrderAllocation_Mclient" Association="Self.FK_TOrderAllocation_Mclient">
+      <End Role="Mclient" EntitySet="Mclient" />
+      <End Role="TOrderAllocation" EntitySet="TOrderAllocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TOrderAllocation_MSuppliers" Association="Self.FK_TOrderAllocation_MSuppliers">
+      <End Role="MSuppliers" EntitySet="MSuppliers" />
+      <End Role="TOrderAllocation" EntitySet="TOrderAllocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TOrderAllocation_MWarehouse" Association="Self.FK_TOrderAllocation_MWarehouse">
+      <End Role="MWarehouse" EntitySet="MWarehouse" />
+      <End Role="TOrderAllocation" EntitySet="TOrderAllocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TOrderAllocation_TOrders" Association="Self.FK_TOrderAllocation_TOrders">
+      <End Role="TOrders" EntitySet="TOrders" />
+      <End Role="TOrderAllocation" EntitySet="TOrderAllocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TOrders_MPayStatus" Association="Self.FK_TOrders_MPayStatus">
+      <End Role="MPayStatus" EntitySet="MPayStatus" />
+      <End Role="TOrders" EntitySet="TOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TOrders_MProduct" Association="Self.FK_TOrders_MProduct">
+      <End Role="MProduct" EntitySet="MProduct" />
+      <End Role="TOrders" EntitySet="TOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TOrders_MUsers" Association="Self.FK_TOrders_MUsers">
+      <End Role="MUsers" EntitySet="MUsers" />
+      <End Role="TOrders" EntitySet="TOrders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

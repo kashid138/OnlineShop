@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="princeshopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="MBrand">
+    <Key>
+      <PropertyRef Name="MB_id" />
+    </Key>
+    <Property Name="MB_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrandTypeName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BrandImageDesc" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MProducts" Relationship="princeshopModel.FK_MProduct_MBrand" FromRole="MBrand" ToRole="MProduct" />
+  </EntityType>
+  <EntityType Name="Mcity">
+    <Key>
+      <PropertyRef Name="nCityID" />
+    </Key>
+    <Property Name="nCityID" Type="Int32" Nullable="false" />
+    <Property Name="sCity" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nStateID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Mstate" Relationship="Self.FK_mcity_mstates" FromRole="Mcity" ToRole="Mstates" />
+    <NavigationProperty Name="MWarehouses" Relationship="Self.FK_MWarehouse_Mcity" FromRole="Mcity" ToRole="MWarehouse" />
+  </EntityType>
+  <EntityType Name="Mclient">
+    <Key>
+      <PropertyRef Name="MC_id" />
+    </Key>
+    <Property Name="MC_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MU_id" Type="Int32" Nullable="false" />
+    <Property Name="CustomerFname" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CustoemrLname" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContactNumber" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AlternateNumber" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PermanentAddress1" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PerrmanentAddress2" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PermanentAddress3" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Staus" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MUser" Relationship="Self.FK_Mclient_MUsers" FromRole="Mclient" ToRole="MUsers" />
+    <NavigationProperty Name="TOrderAllocations" Relationship="princeshopModel.FK_TOrderAllocation_Mclient" FromRole="Mclient" ToRole="TOrderAllocation" />
+  </EntityType>
+  <EntityType Name="MProductType">
+    <Key>
+      <PropertyRef Name="MPT_id" />
+    </Key>
+    <Property Name="MPT_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductTypeName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MProducts" Relationship="princeshopModel.FK_MProduct_MProductType" FromRole="MProductType" ToRole="MProduct" />
+  </EntityType>
+  <EntityType Name="Mstate">
+    <Key>
+      <PropertyRef Name="nStateID" />
+    </Key>
+    <Property Name="nStateID" Type="Int32" Nullable="false" />
+    <Property Name="sState" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Mcities" Relationship="Self.FK_mcity_mstates" FromRole="Mstates" ToRole="Mcity" />
+    <NavigationProperty Name="MWarehouses" Relationship="Self.FK_MWarehouse_Mstates" FromRole="Mstates" ToRole="MWarehouse" />
+  </EntityType>
+  <EntityType Name="MSupplier">
+    <Key>
+      <PropertyRef Name="MS_id" />
+    </Key>
+    <Property Name="MS_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SupplierAddress1" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SupplierAddress2" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SupplierAddress3" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SupplierCity" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Pincode" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MSupplierProductMaps" Relationship="princeshopModel.FK_MSupplierProductMap_MSuppliers" FromRole="MSupplier" ToRole="MSupplierProductMap" />
+    <NavigationProperty Name="TOrderAllocations" Relationship="princeshopModel.FK_TOrderAllocation_MSuppliers" FromRole="MSupplier" ToRole="TOrderAllocation" />
+  </EntityType>
+  <EntityType Name="MUser">
+    <Key>
+      <PropertyRef Name="MU_id" />
+    </Key>
+    <Property Name="MU_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserEmail" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserPwd" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MUT_id" Type="Int32" Nullable="false" />
+    <Property Name="JoinDate" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Mclients" Relationship="Self.FK_Mclient_MUsers" FromRole="MUsers" ToRole="Mclient" />
+    <NavigationProperty Name="MUserType" Relationship="Self.FK_MUsers_MUserType" FromRole="MUsers" ToRole="MUserType" />
+    <NavigationProperty Name="TCarts" Relationship="princeshopModel.FK_TCart_MUsers" FromRole="MUser" ToRole="TCart" />
+    <NavigationProperty Name="TOrders" Relationship="princeshopModel.FK_TOrders_MUsers" FromRole="MUser" ToRole="TOrder" />
+  </EntityType>
+  <EntityType Name="MUserType">
+    <Key>
+      <PropertyRef Name="MUT_id" />
+    </Key>
+    <Property Name="MUT_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserTypeName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MUsers" Relationship="Self.FK_MUsers_MUserType" FromRole="MUserType" ToRole="MUsers" />
+  </EntityType>
+  <EntityType Name="MWarehouse">
+    <Key>
+      <PropertyRef Name="MW_ID" />
+    </Key>
+    <Property Name="MW_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WarehouseName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WarehouseAddress1" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WarehouseAddress2" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WarehouseAddress3" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nCityID" Type="Int32" Nullable="false" />
+    <Property Name="nStateID" Type="Int32" Nullable="false" />
+    <Property Name="Pincode" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Mcity" Relationship="Self.FK_MWarehouse_Mcity" FromRole="MWarehouse" ToRole="Mcity" />
+    <NavigationProperty Name="Mstate" Relationship="Self.FK_MWarehouse_Mstates" FromRole="MWarehouse" ToRole="Mstates" />
+    <NavigationProperty Name="TOrderAllocations" Relationship="princeshopModel.FK_TOrderAllocation_MWarehouse" FromRole="MWarehouse" ToRole="TOrderAllocation" />
+  </EntityType>
+  <EntityType Name="TProductQty">
+    <Key>
+      <PropertyRef Name="nProductQtyID" />
+    </Key>
+    <Property Name="nProductQtyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nProductID" Type="Int32" Nullable="false" />
+    <Property Name="nProductQty" Type="Double" Nullable="false" />
+    <Property Name="nWarehouseID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_mcity_mstates">
+    <End Role="Mstates" Type="Self.Mstate" Multiplicity="1" />
+    <End Role="Mcity" Type="Self.Mcity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mstates">
+        <PropertyRef Name="nStateID" />
+      </Principal>
+      <Dependent Role="Mcity">
+        <PropertyRef Name="nStateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MWarehouse_Mcity">
+    <End Role="Mcity" Type="Self.Mcity" Multiplicity="1" />
+    <End Role="MWarehouse" Type="Self.MWarehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mcity">
+        <PropertyRef Name="nCityID" />
+      </Principal>
+      <Dependent Role="MWarehouse">
+        <PropertyRef Name="nCityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mclient_MUsers">
+    <End Role="MUsers" Type="Self.MUser" Multiplicity="1" />
+    <End Role="Mclient" Type="Self.Mclient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUsers">
+        <PropertyRef Name="MU_id" />
+      </Principal>
+      <Dependent Role="Mclient">
+        <PropertyRef Name="MU_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MWarehouse_Mstates">
+    <End Role="Mstates" Type="Self.Mstate" Multiplicity="1" />
+    <End Role="MWarehouse" Type="Self.MWarehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mstates">
+        <PropertyRef Name="nStateID" />
+      </Principal>
+      <Dependent Role="MWarehouse">
+        <PropertyRef Name="nStateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MUsers_MUserType">
+    <End Role="MUserType" Type="Self.MUserType" Multiplicity="1" />
+    <End Role="MUsers" Type="Self.MUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUserType">
+        <PropertyRef Name="MUT_id" />
+      </Principal>
+      <Dependent Role="MUsers">
+        <PropertyRef Name="MUT_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="princeshopEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MBrands" EntityType="Self.MBrand" />
+    <EntitySet Name="Mcities" EntityType="Self.Mcity" />
+    <EntitySet Name="Mclients" EntityType="Self.Mclient" />
+    <EntitySet Name="MProductTypes" EntityType="Self.MProductType" />
+    <EntitySet Name="Mstates" EntityType="Self.Mstate" />
+    <EntitySet Name="MSuppliers" EntityType="Self.MSupplier" />
+    <EntitySet Name="MUsers" EntityType="Self.MUser" />
+    <EntitySet Name="MUserTypes" EntityType="Self.MUserType" />
+    <EntitySet Name="MWarehouses" EntityType="Self.MWarehouse" />
+    <EntitySet Name="TProductQties" EntityType="Self.TProductQty" />
+    <AssociationSet Name="FK_mcity_mstates" Association="Self.FK_mcity_mstates">
+      <End Role="Mstates" EntitySet="Mstates" />
+      <End Role="Mcity" EntitySet="Mcities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MWarehouse_Mcity" Association="Self.FK_MWarehouse_Mcity">
+      <End Role="Mcity" EntitySet="Mcities" />
+      <End Role="MWarehouse" EntitySet="MWarehouses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mclient_MUsers" Association="Self.FK_Mclient_MUsers">
+      <End Role="MUsers" EntitySet="MUsers" />
+      <End Role="Mclient" EntitySet="Mclients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MWarehouse_Mstates" Association="Self.FK_MWarehouse_Mstates">
+      <End Role="Mstates" EntitySet="Mstates" />
+      <End Role="MWarehouse" EntitySet="MWarehouses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MUsers_MUserType" Association="Self.FK_MUsers_MUserType">
+      <End Role="MUserType" EntitySet="MUserTypes" />
+      <End Role="MUsers" EntitySet="MUsers" />
+    </AssociationSet>
+    <EntitySet Name="MProducts" EntityType="princeshopModel.MProduct" />
+    <AssociationSet Name="FK_MProduct_MBrand" Association="princeshopModel.FK_MProduct_MBrand">
+      <End Role="MBrand" EntitySet="MBrands" />
+      <End Role="MProduct" EntitySet="MProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MProduct_MProductType" Association="princeshopModel.FK_MProduct_MProductType">
+      <End Role="MProductType" EntitySet="MProductTypes" />
+      <End Role="MProduct" EntitySet="MProducts" />
+    </AssociationSet>
+    <EntitySet Name="MSupplierProductMaps" EntityType="princeshopModel.MSupplierProductMap" />
+    <AssociationSet Name="FK_MSupplierProductMap_MProduct" Association="princeshopModel.FK_MSupplierProductMap_MProduct">
+      <End Role="MProduct" EntitySet="MProducts" />
+      <End Role="MSupplierProductMap" EntitySet="MSupplierProductMaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MSupplierProductMap_MSuppliers" Association="princeshopModel.FK_MSupplierProductMap_MSuppliers">
+      <End Role="MSupplier" EntitySet="MSuppliers" />
+      <End Role="MSupplierProductMap" EntitySet="MSupplierProductMaps" />
+    </AssociationSet>
+    <EntitySet Name="TCarts" EntityType="princeshopModel.TCart" />
+    <EntitySet Name="TOrderAllocations" EntityType="princeshopModel.TOrderAllocation" />
+    <AssociationSet Name="FK_TOrderAllocation_Mclient" Association="princeshopModel.FK_TOrderAllocation_Mclient">
+      <End Role="Mclient" EntitySet="Mclients" />
+      <End Role="TOrderAllocation" EntitySet="TOrderAllocations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TCart_MProduct" Association="princeshopModel.FK_TCart_MProduct">
+      <End Role="MProduct" EntitySet="MProducts" />
+      <End Role="TCart" EntitySet="TCarts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TOrderAllocation_MSuppliers" Association="princeshopModel.FK_TOrderAllocation_MSuppliers">
+      <End Role="MSupplier" EntitySet="MSuppliers" />
+      <End Role="TOrderAllocation" EntitySet="TOrderAllocations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TCart_MUsers" Association="princeshopModel.FK_TCart_MUsers">
+      <End Role="MUser" EntitySet="MUsers" />
+      <End Role="TCart" EntitySet="TCarts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TOrderAllocation_MWarehouse" Association="princeshopModel.FK_TOrderAllocation_MWarehouse">
+      <End Role="MWarehouse" EntitySet="MWarehouses" />
+      <End Role="TOrderAllocation" EntitySet="TOrderAllocations" />
+    </AssociationSet>
+    <EntitySet Name="MPayStatus" EntityType="princeshopModel.MPayStatu" />
+    <EntitySet Name="TOrders" EntityType="princeshopModel.TOrder" />
+    <AssociationSet Name="FK_TOrders_MPayStatus" Association="princeshopModel.FK_TOrders_MPayStatus">
+      <End Role="MPayStatu" EntitySet="MPayStatus" />
+      <End Role="TOrder" EntitySet="TOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TOrders_MProduct" Association="princeshopModel.FK_TOrders_MProduct">
+      <End Role="MProduct" EntitySet="MProducts" />
+      <End Role="TOrder" EntitySet="TOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TOrders_MUsers" Association="princeshopModel.FK_TOrders_MUsers">
+      <End Role="MUser" EntitySet="MUsers" />
+      <End Role="TOrder" EntitySet="TOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TOrderAllocation_TOrders" Association="princeshopModel.FK_TOrderAllocation_TOrders">
+      <End Role="TOrder" EntitySet="TOrders" />
+      <End Role="TOrderAllocation" EntitySet="TOrderAllocations" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="MProduct">
+    <Key>
+      <PropertyRef Name="MP_id" />
+    </Key>
+    <Property Name="MP_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MPT_id" Type="Int32" Nullable="false" />
+    <Property Name="MBt_id" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="ProductDescription" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="ProductQty" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+    <Property Name="MinProductQty" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+    <Property Name="ProductPrice" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+    <Property Name="ProductImageDecs" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MBrand" Relationship="princeshopModel.FK_MProduct_MBrand" FromRole="MProduct" ToRole="MBrand" />
+    <NavigationProperty Name="MProductType" Relationship="princeshopModel.FK_MProduct_MProductType" FromRole="MProduct" ToRole="MProductType" />
+    <NavigationProperty Name="MSupplierProductMaps" Relationship="princeshopModel.FK_MSupplierProductMap_MProduct" FromRole="MProduct" ToRole="MSupplierProductMap" />
+    <NavigationProperty Name="TCarts" Relationship="princeshopModel.FK_TCart_MProduct" FromRole="MProduct" ToRole="TCart" />
+    <NavigationProperty Name="TOrders" Relationship="princeshopModel.FK_TOrders_MProduct" FromRole="MProduct" ToRole="TOrder" />
+  </EntityType>
+  <Association Name="FK_MProduct_MBrand">
+    <End Type="princeshopModel.MBrand" Role="MBrand" Multiplicity="1" />
+    <End Type="princeshopModel.MProduct" Role="MProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MBrand">
+        <PropertyRef Name="MB_id" />
+      </Principal>
+      <Dependent Role="MProduct">
+        <PropertyRef Name="MBt_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MProduct_MProductType">
+    <End Type="princeshopModel.MProductType" Role="MProductType" Multiplicity="1" />
+    <End Type="princeshopModel.MProduct" Role="MProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MProductType">
+        <PropertyRef Name="MPT_id" />
+      </Principal>
+      <Dependent Role="MProduct">
+        <PropertyRef Name="MPT_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="MSupplierProductMap">
+    <Key>
+      <PropertyRef Name="nmap_id" />
+    </Key>
+    <Property Name="nmap_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MS_id" Type="Int32" Nullable="false" />
+    <Property Name="MP_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="MProduct" Relationship="princeshopModel.FK_MSupplierProductMap_MProduct" FromRole="MSupplierProductMap" ToRole="MProduct" />
+    <NavigationProperty Name="MSupplier" Relationship="princeshopModel.FK_MSupplierProductMap_MSuppliers" FromRole="MSupplierProductMap" ToRole="MSupplier" />
+  </EntityType>
+  <Association Name="FK_MSupplierProductMap_MProduct">
+    <End Type="princeshopModel.MProduct" Role="MProduct" Multiplicity="1" />
+    <End Type="princeshopModel.MSupplierProductMap" Role="MSupplierProductMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MProduct">
+        <PropertyRef Name="MP_id" />
+      </Principal>
+      <Dependent Role="MSupplierProductMap">
+        <PropertyRef Name="MP_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MSupplierProductMap_MSuppliers">
+    <End Type="princeshopModel.MSupplier" Role="MSupplier" Multiplicity="1" />
+    <End Type="princeshopModel.MSupplierProductMap" Role="MSupplierProductMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MSupplier">
+        <PropertyRef Name="MS_id" />
+      </Principal>
+      <Dependent Role="MSupplierProductMap">
+        <PropertyRef Name="MS_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TCart">
+    <Key>
+      <PropertyRef Name="nCartId" />
+    </Key>
+    <Property Name="nCartId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nUserId" Type="Int32" Nullable="false" />
+    <Property Name="nProductId" Type="Int32" Nullable="false" />
+    <Property Name="bstatus" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MProduct" Relationship="princeshopModel.FK_TCart_MProduct" FromRole="TCart" ToRole="MProduct" />
+    <NavigationProperty Name="MUser" Relationship="princeshopModel.FK_TCart_MUsers" FromRole="TCart" ToRole="MUser" />
+  </EntityType>
+  <EntityType Name="TOrderAllocation">
+    <Key>
+      <PropertyRef Name="nProcessOrderID" />
+    </Key>
+    <Property Name="nProcessOrderID" Type="Int32" Nullable="false" />
+    <Property Name="nOrderID" Type="Int32" Nullable="false" />
+    <Property Name="nWarehouseID" Type="Int32" Nullable="false" />
+    <Property Name="nClientID" Type="Int32" Nullable="false" />
+    <Property Name="nSupplierID" Type="Int32" Nullable="false" />
+    <Property Name="bStatus" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Mclient" Relationship="princeshopModel.FK_TOrderAllocation_Mclient" FromRole="TOrderAllocation" ToRole="Mclient" />
+    <NavigationProperty Name="MSupplier" Relationship="princeshopModel.FK_TOrderAllocation_MSuppliers" FromRole="TOrderAllocation" ToRole="MSupplier" />
+    <NavigationProperty Name="MWarehouse" Relationship="princeshopModel.FK_TOrderAllocation_MWarehouse" FromRole="TOrderAllocation" ToRole="MWarehouse" />
+    <NavigationProperty Name="TOrder" Relationship="princeshopModel.FK_TOrderAllocation_TOrders" FromRole="TOrderAllocation" ToRole="TOrder" />
+  </EntityType>
+  <Association Name="FK_TOrderAllocation_Mclient">
+    <End Type="princeshopModel.Mclient" Role="Mclient" Multiplicity="1" />
+    <End Type="princeshopModel.TOrderAllocation" Role="TOrderAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mclient">
+        <PropertyRef Name="MC_id" />
+      </Principal>
+      <Dependent Role="TOrderAllocation">
+        <PropertyRef Name="nClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TCart_MProduct">
+    <End Type="princeshopModel.MProduct" Role="MProduct" Multiplicity="1" />
+    <End Type="princeshopModel.TCart" Role="TCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MProduct">
+        <PropertyRef Name="MP_id" />
+      </Principal>
+      <Dependent Role="TCart">
+        <PropertyRef Name="nProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TOrderAllocation_MSuppliers">
+    <End Type="princeshopModel.MSupplier" Role="MSupplier" Multiplicity="1" />
+    <End Type="princeshopModel.TOrderAllocation" Role="TOrderAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MSupplier">
+        <PropertyRef Name="MS_id" />
+      </Principal>
+      <Dependent Role="TOrderAllocation">
+        <PropertyRef Name="nSupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TCart_MUsers">
+    <End Type="princeshopModel.MUser" Role="MUser" Multiplicity="1" />
+    <End Type="princeshopModel.TCart" Role="TCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUser">
+        <PropertyRef Name="MU_id" />
+      </Principal>
+      <Dependent Role="TCart">
+        <PropertyRef Name="nUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TOrderAllocation_MWarehouse">
+    <End Type="princeshopModel.MWarehouse" Role="MWarehouse" Multiplicity="1" />
+    <End Type="princeshopModel.TOrderAllocation" Role="TOrderAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MWarehouse">
+        <PropertyRef Name="MW_ID" />
+      </Principal>
+      <Dependent Role="TOrderAllocation">
+        <PropertyRef Name="nWarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="MPayStatu">
+    <Key>
+      <PropertyRef Name="nPaymentTypeID" />
+    </Key>
+    <Property Name="nPaymentTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sPaymentType" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TOrders" Relationship="princeshopModel.FK_TOrders_MPayStatus" FromRole="MPayStatu" ToRole="TOrder" />
+  </EntityType>
+  <EntityType Name="TOrder">
+    <Key>
+      <PropertyRef Name="nTId" />
+    </Key>
+    <Property Name="nTId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sTNo" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="dtTrans" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="nUserID" Type="Int32" Nullable="false" />
+    <Property Name="nProdutID" Type="Int32" Nullable="false" />
+    <Property Name="nQty" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+    <Property Name="nAmount" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+    <Property Name="nTaxAmount" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+    <Property Name="nDeliveryCharges" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+    <Property Name="dtDeliveryDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="nPaytype" Type="Int32" Nullable="false" />
+    <Property Name="dtCancel" Type="DateTime" Precision="0" />
+    <Property Name="sCancel" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="bStatus" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MPayStatu" Relationship="princeshopModel.FK_TOrders_MPayStatus" FromRole="TOrder" ToRole="MPayStatu" />
+    <NavigationProperty Name="MProduct" Relationship="princeshopModel.FK_TOrders_MProduct" FromRole="TOrder" ToRole="MProduct" />
+    <NavigationProperty Name="MUser" Relationship="princeshopModel.FK_TOrders_MUsers" FromRole="TOrder" ToRole="MUser" />
+    <NavigationProperty Name="TOrderAllocations" Relationship="princeshopModel.FK_TOrderAllocation_TOrders" FromRole="TOrder" ToRole="TOrderAllocation" />
+  </EntityType>
+  <Association Name="FK_TOrders_MPayStatus">
+    <End Type="princeshopModel.MPayStatu" Role="MPayStatu" Multiplicity="1" />
+    <End Type="princeshopModel.TOrder" Role="TOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MPayStatu">
+        <PropertyRef Name="nPaymentTypeID" />
+      </Principal>
+      <Dependent Role="TOrder">
+        <PropertyRef Name="nPaytype" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TOrders_MProduct">
+    <End Type="princeshopModel.MProduct" Role="MProduct" Multiplicity="1" />
+    <End Type="princeshopModel.TOrder" Role="TOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MProduct">
+        <PropertyRef Name="MP_id" />
+      </Principal>
+      <Dependent Role="TOrder">
+        <PropertyRef Name="nProdutID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TOrders_MUsers">
+    <End Type="princeshopModel.MUser" Role="MUser" Multiplicity="1" />
+    <End Type="princeshopModel.TOrder" Role="TOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUser">
+        <PropertyRef Name="MU_id" />
+      </Principal>
+      <Dependent Role="TOrder">
+        <PropertyRef Name="nUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TOrderAllocation_TOrders">
+    <End Type="princeshopModel.TOrder" Role="TOrder" Multiplicity="1" />
+    <End Type="princeshopModel.TOrderAllocation" Role="TOrderAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TOrder">
+        <PropertyRef Name="nTId" />
+      </Principal>
+      <Dependent Role="TOrderAllocation">
+        <PropertyRef Name="nOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

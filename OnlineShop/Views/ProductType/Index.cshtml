@@ -1,0 +1,41 @@
+﻿@model IEnumerable<OnlineShop.Models.MProductType>
+
+@{
+    ViewBag.Title = "Product Types";
+}
+<h2>List Of Product Types</h2>
+<p>
+    <button class="btn btn-primary editCustomer" data-details="Create" id="n1" data-controller="ProductType">
+        <span class="glyphicon glyphicon-plus-sign"></span>
+        Create New
+    </button>
+</p>
+<table class="table table-striped table-bordered" id="datatable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductTypeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductTypeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <button class="btn btn-success editCustomer glyphicon glyphicon-pencil" id="@item.MPT_id" data-details="Edit" data-controller="ProductType">Edit</button>
+                <button class="btn btn-danger editCustomer glyphicon glyphicon-remove" id="@item.MPT_id" data-details="Delete" data-controller="ProductType">Delete</button>
+            </td>
+        </tr>
+    }
+
+</table>

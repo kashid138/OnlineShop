@@ -1,0 +1,87 @@
+﻿@model IEnumerable<OnlineShop.Models.MProduct>
+
+@{
+    ViewBag.Title = "Products";
+}
+
+
+<h2>List Of Products</h2>
+<p>
+    <button class="btn btn-primary editCustomer" data-details="Create" id="n1" data-controller="Product">
+        <span class="glyphicon glyphicon-plus-sign"></span>
+        Create New
+    </button>
+</p>
+<table class="table table-striped table-bordered" id="datatable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinProductQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </th>
+            <th>
+                
+                @Html.DisplayNameFor(model => model.ProductImageDecs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MBrand.BrandTypeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MProductType.ProductTypeName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductQty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinProductQty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductPrice)
+            </td>
+            <td>
+                <img src="~/Uploads/@item.ProductImageDecs" height="100" width="100" />
+                @*@Html.DisplayFor(modelItem => item.ProductImageDecs)*@
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MBrand.BrandTypeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MProductType.ProductTypeName)
+            </td>
+            <td>
+                <button class="btn btn-success editCustomer glyphicon glyphicon-pencil" id="@item.MP_id" data-details="Edit" data-controller="Product">Edit</button>
+                <button class="btn btn-danger editCustomer glyphicon glyphicon-remove" id="@item.MP_id" data-details="Delete" data-controller="Product">Delete</button>
+            </td>
+        </tr>
+    }
+
+</table>

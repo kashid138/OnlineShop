@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "ContactUs";
+}
+<style>
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+</style>
+<div class="container" style="padding-top:20px;">
+    <div id="map"></div>
+    <br />
+    <br />
+    <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">Addresss</div>
+        <div class="card-body">
+            <div class="card-text">
+                Govind House, shop No.4,Behind Fish Market
+                Bazar Lane, Malwani Church, Off.Marve Road,
+                Malad(W),Mumbai-400095
+                <br />
+                Mob-9930544134
+                <br />
+                Email-ykashid9@gmail.com
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function initMap() {
+        var uluru = { lat: 19.182755, lng: 72.840157 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiUsqTfAf1pZzD-DduX3a_o-KGKeSuoT0&callback=initMap">
+</script>

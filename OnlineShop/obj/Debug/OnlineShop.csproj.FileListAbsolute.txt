@@ -1,0 +1,189 @@
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\roslyn\csc.exe
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\roslyn\System.Collections.Immutable.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\roslyn\vbc.exe
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\roslyn\VBCSCompiler.exe
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\roslyn\VBCSCompiler.exe.config
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\OnlineShop.dll.config
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\OnlineShop.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\OnlineShop.pdb
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\EntityFramework.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\EntityFramework.SqlServer.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\Facebook.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\System.Web.Helpers.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\System.Web.Mvc.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\System.Web.Razor.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\System.Web.Webpages.Deployment.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\System.Web.Webpages.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\System.Web.Webpages.Razor.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\EntityFramework.xml
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\EntityFramework.SqlServer.xml
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\Facebook.xml
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\System.Web.Razor.xml
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\System.Web.Webpages.xml
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\System.Web.Webpages.Deployment.xml
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\System.Web.Webpages.Razor.xml
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\System.Web.Helpers.xml
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\bin\System.Web.Mvc.xml
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\obj\Debug\OnlineShop.csprojResolveAssemblyReference.cache
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\obj\Debug\OnlineShop.dll
+D:\Projects\Projects Non Commercial\Dot Net\OnlineShop\OnlineShop\obj\Debug\OnlineShop.pdb
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\roslyn\csc.exe
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\roslyn\System.Collections.Immutable.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\roslyn\System.Reflection.Metadata.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\roslyn\vbc.exe
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\roslyn\VBCSCompiler.exe
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\roslyn\VBCSCompiler.exe.config
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\OnlineShop.dll.config
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\OnlineShop.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\OnlineShop.pdb
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\EntityFramework.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\EntityFramework.SqlServer.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\Facebook.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\Microsoft.Web.Infrastructure.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\System.Web.Helpers.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\System.Web.Mvc.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\System.Web.Razor.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\System.Web.Webpages.Deployment.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\System.Web.Webpages.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\System.Web.Webpages.Razor.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\EntityFramework.xml
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\EntityFramework.SqlServer.xml
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\Facebook.xml
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\System.Web.Razor.xml
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\System.Web.Webpages.xml
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\System.Web.Webpages.Deployment.xml
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\System.Web.Webpages.Razor.xml
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\System.Web.Helpers.xml
+D:\Visionary rojects\OnlineShop\OnlineShop\bin\System.Web.Mvc.xml
+D:\Visionary rojects\OnlineShop\OnlineShop\obj\Debug\OnlineShop.csprojResolveAssemblyReference.cache
+D:\Visionary rojects\OnlineShop\OnlineShop\obj\Debug\OnlineShop.dll
+D:\Visionary rojects\OnlineShop\OnlineShop\obj\Debug\OnlineShop.pdb
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\roslyn\csc.exe
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\roslyn\vbc.exe
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\roslyn\VBCSCompiler.exe
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\OnlineShop.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\OnlineShop.pdb
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\EntityFramework.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\EntityFramework.SqlServer.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\Facebook.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\System.Web.Helpers.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\System.Web.Mvc.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\System.Web.Razor.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\System.Web.Webpages.Deployment.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\System.Web.Webpages.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\System.Web.Webpages.Razor.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\EntityFramework.xml
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\EntityFramework.SqlServer.xml
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\Facebook.xml
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\System.Web.Razor.xml
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\System.Web.Webpages.xml
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\System.Web.Webpages.Deployment.xml
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\System.Web.Webpages.Razor.xml
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\System.Web.Helpers.xml
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\bin\System.Web.Mvc.xml
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\obj\Debug\OnlineShop.csprojResolveAssemblyReference.cache
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\obj\Debug\OnlineShop.dll
+C:\Users\ACER\Desktop\OnlineShop\OnlineShop\obj\Debug\OnlineShop.pdb
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\roslyn\csc.exe
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\roslyn\vbc.exe
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\roslyn\VBCSCompiler.exe
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\OnlineShop.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\OnlineShop.pdb
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\EntityFramework.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\EntityFramework.SqlServer.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\Facebook.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\System.Web.Helpers.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\System.Web.Mvc.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\System.Web.Razor.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\System.Web.Webpages.Deployment.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\System.Web.Webpages.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\System.Web.Webpages.Razor.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\EntityFramework.xml
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\EntityFramework.SqlServer.xml
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\Facebook.xml
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\System.Web.Razor.xml
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\System.Web.Webpages.xml
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\System.Web.Webpages.Deployment.xml
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\System.Web.Webpages.Razor.xml
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\System.Web.Helpers.xml
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\bin\System.Web.Mvc.xml
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\obj\Debug\OnlineShop.csprojResolveAssemblyReference.cache
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\obj\Debug\OnlineShop.dll
+C:\Users\ntfte\Downloads\OnlineShop\OnlineShop\obj\Debug\OnlineShop.pdb
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\roslyn\csc.exe
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\roslyn\System.Collections.Immutable.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\roslyn\System.Reflection.Metadata.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\roslyn\vbc.exe
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\roslyn\VBCSCompiler.exe
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\roslyn\VBCSCompiler.exe.config
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\OnlineShop.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\OnlineShop.pdb
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\EntityFramework.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\EntityFramework.SqlServer.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\Facebook.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\System.Web.Helpers.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\System.Web.Mvc.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\System.Web.Razor.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\System.Web.Webpages.Deployment.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\System.Web.Webpages.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\System.Web.Webpages.Razor.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\EntityFramework.xml
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\EntityFramework.SqlServer.xml
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\Facebook.xml
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\System.Web.Razor.xml
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\System.Web.Webpages.xml
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\System.Web.Webpages.Deployment.xml
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\System.Web.Webpages.Razor.xml
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\System.Web.Helpers.xml
+F:\TYProjectBackup\OnlineShop\OnlineShop\bin\System.Web.Mvc.xml
+F:\TYProjectBackup\OnlineShop\OnlineShop\obj\Debug\OnlineShop.csprojResolveAssemblyReference.cache
+F:\TYProjectBackup\OnlineShop\OnlineShop\obj\Debug\OnlineShop.dll
+F:\TYProjectBackup\OnlineShop\OnlineShop\obj\Debug\OnlineShop.pdb

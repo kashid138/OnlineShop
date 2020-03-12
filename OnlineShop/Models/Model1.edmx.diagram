@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5f30421463a24c75b9a5c09a9f4a26ca" Name="Diagram1">
+        <EntityTypeShape EntityType="princeshopModel.MBrand" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="princeshopModel.Mcity" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="princeshopModel.Mclient" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="princeshopModel.MProductType" Width="1.5" PointX="7.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="princeshopModel.Mstate" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="princeshopModel.MSupplier" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="princeshopModel.MUser" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="princeshopModel.MUserType" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="princeshopModel.MWarehouse" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="princeshopModel.TProductQty" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="princeshopModel.FK_mcity_mstates" ManuallyRouted="false" />
+        <AssociationConnector Association="princeshopModel.FK_MWarehouse_Mcity" ManuallyRouted="false" />
+        <AssociationConnector Association="princeshopModel.FK_Mclient_MUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="princeshopModel.FK_MWarehouse_Mstates" ManuallyRouted="false" />
+        <AssociationConnector Association="princeshopModel.FK_MUsers_MUserType" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="princeshopModel.MProduct" Width="1.5" PointX="10" PointY="2.875" />
+        <AssociationConnector Association="princeshopModel.FK_MProduct_MBrand" />
+        <AssociationConnector Association="princeshopModel.FK_MProduct_MProductType" />
+        <EntityTypeShape EntityType="princeshopModel.MSupplierProductMap" Width="1.5" PointX="12.25" PointY="6.25" />
+        <AssociationConnector Association="princeshopModel.FK_MSupplierProductMap_MProduct" />
+        <AssociationConnector Association="princeshopModel.FK_MSupplierProductMap_MSuppliers" />
+        <EntityTypeShape EntityType="princeshopModel.TCart" Width="1.5" PointX="12.25" PointY="9" />
+        <EntityTypeShape EntityType="princeshopModel.TOrderAllocation" Width="1.5" PointX="14.5" PointY="4.75" />
+        <AssociationConnector Association="princeshopModel.FK_TOrderAllocation_Mclient" />
+        <AssociationConnector Association="princeshopModel.FK_TCart_MProduct" />
+        <AssociationConnector Association="princeshopModel.FK_TOrderAllocation_MSuppliers" />
+        <AssociationConnector Association="princeshopModel.FK_TCart_MUsers" />
+        <AssociationConnector Association="princeshopModel.FK_TOrderAllocation_MWarehouse" />
+        <EntityTypeShape EntityType="princeshopModel.MPayStatu" Width="1.5" PointX="10" PointY="1.375" />
+        <EntityTypeShape EntityType="princeshopModel.TOrder" Width="1.5" PointX="12.25" PointY="0.75" />
+        <AssociationConnector Association="princeshopModel.FK_TOrders_MPayStatus" />
+        <AssociationConnector Association="princeshopModel.FK_TOrders_MProduct" />
+        <AssociationConnector Association="princeshopModel.FK_TOrders_MUsers" />
+        <AssociationConnector Association="princeshopModel.FK_TOrderAllocation_TOrders" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

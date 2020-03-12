@@ -1,0 +1,67 @@
+﻿@model IEnumerable<OnlineShop.Models.MProduct>
+
+@{
+    ViewBag.Title = "Home";
+}
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/slider.css" rel="stylesheet" type="text/css" />
+
+<style>
+    .imgproduct {
+        height: 250px !important;
+        width: 100% !important;
+    }
+</style>
+<div class="w3-container" align="center">
+    <h2>Most Trending Products</h2>
+    <p>Find out more on monthly top Sports Products in the market, based on the volume of searches and inquiries from our Global Sources website.</p>
+</div>
+<div class="row text-center text-lg-left">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="my-list">
+                <img src="~/Uploads/@item.ProductImageDecs" alt="dsadas" height="200" width="200" />
+                <h3>@Html.DisplayFor(modelItem => item.ProductName)</h3>
+                <h3>&#8377; &nbsp; @Html.DisplayFor(modelItem => item.ProductPrice)</h3>
+                <div class="detail">
+                    <img src="~/Uploads/@item.ProductImageDecs" alt="dsadas" height="200" width="200" />
+                    <button class="btn btn-primary editCustomer" data-details="Create" id="@item.MP_id" data-controller="Orders" data-qty="@item.ProductQty">Book Now</button>
+                    <button class="btn btn-warning editCustomer" data-details="Details" id="@item.MP_id" data-controller="Product">Details</button>
+                </div>
+            </div>
+        </div>
+    }
+    <br />
+
+</div>
+<div class="w3-container" align="center">
+    <h2>Our Products</h2>
+    <p>Find out more Sports Products in the market.</p>
+</div>
+<div class="container">
+    <div class="row text-center text-lg-left">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <div class="d-block imgproduct">
+                    <img class="img-fluid img-thumbnail" src="~/Uploads/@item.ProductImageDecs" alt="" height="200" width="200">
+                </div>
+                <h3>@Html.DisplayFor(modelItem => item.ProductName)</h3>
+                <br />
+                &#8377; &nbsp; @Html.DisplayFor(modelItem => item.ProductPrice, new { })
+                <br />
+                <button class="btn btn-primary editCustomer" data-details="Create" id="@item.MP_id" data-controller="Orders" data-qty="@item.ProductQty">Book Now</button>
+                <button class="btn btn-warning editCustomer" data-details="Details" id="@item.MP_id" data-controller="Product">Details</button>
+            </div>
+        }
+        <br />
+
+    </div>
+
+
+</div>
+
+
+
+

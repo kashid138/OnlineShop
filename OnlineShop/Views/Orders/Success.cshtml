@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Order Confirmation";
+}
+@if (@Session["OrderNo"] != null)
+{
+    <div class="container" style="margin-top:10px;">
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Congradulations !</strong> Your Order successfully Placed with Order No: <b>@Session["OrderNo"].ToString()</b>.
+        </div>
+    </div>
+}

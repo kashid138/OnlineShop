@@ -1,0 +1,42 @@
+﻿@model OnlineShop.Models.TCart
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TCart</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.bstatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bstatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MProduct.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MProduct.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MUser.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUser.UserName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.nCartId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

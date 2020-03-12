@@ -1,0 +1,89 @@
+﻿@model OnlineShop.Models.MProduct
+@{
+    Layout = null;
+}
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductQty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinProductQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinProductQty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductImageDecs)
+        </dt>
+
+        <dd>
+            <img src="~/Uploads/@Model.ProductImageDecs" height="100" width="100" />
+            @*@Html.DisplayFor(model => model.ProductImageDecs)*@
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MBrand.BrandTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MBrand.BrandTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MProductType.ProductTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MProductType.ProductTypeName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+        </div>
+    }
+</div>

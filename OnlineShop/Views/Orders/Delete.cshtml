@@ -1,0 +1,116 @@
+﻿@model OnlineShop.Models.TOrder
+@{
+    Layout = null;
+}
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sTNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.sTNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.dtTrans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dtTrans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nQty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nTaxAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nTaxAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nDeliveryCharges)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nDeliveryCharges)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dtDeliveryDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dtDeliveryDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dtCancel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dtCancel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sCancel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sCancel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MPayStatu.sPaymentType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MPayStatu.sPaymentType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MProduct.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MProduct.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MUser.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUser.UserName)
+        </dd>
+    </dl>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+        </div>
+    }
+</div>

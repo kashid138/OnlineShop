@@ -1,0 +1,90 @@
+﻿@model OnlineShop.Models.Mclient
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Mclient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerFname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerFname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustoemrLname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustoemrLname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlternateNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlternateNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PermanentAddress1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PermanentAddress1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerrmanentAddress2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerrmanentAddress2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PermanentAddress3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PermanentAddress3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Staus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Staus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MUser.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MUser.UserName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MC_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,16 @@
+﻿.center {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 150;
+     margin-bottom: auto;
+}
+
+.login-help{
+
+margin-left: 20px;
+}
+
+.container {
+  margin-top: 20px;
+}

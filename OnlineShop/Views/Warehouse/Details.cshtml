@@ -1,0 +1,82 @@
+﻿@model OnlineShop.Models.MWarehouse
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MWarehouse</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.WarehouseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WarehouseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WarehouseAddress1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WarehouseAddress1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WarehouseAddress2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WarehouseAddress2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WarehouseAddress3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WarehouseAddress3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pincode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pincode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mcity.sCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mcity.sCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mstate.sState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mstate.sState)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MW_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

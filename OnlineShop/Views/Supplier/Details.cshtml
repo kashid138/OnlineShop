@@ -1,0 +1,74 @@
+﻿@model OnlineShop.Models.MSupplier
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MSupplier</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierAddress1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierAddress1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierAddress2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierAddress2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierAddress3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierAddress3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pincode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pincode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MS_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

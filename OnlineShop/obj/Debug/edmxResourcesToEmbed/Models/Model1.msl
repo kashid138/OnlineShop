@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="princeshopModelStoreContainer" CdmEntityContainer="princeshopEntities">
+    <EntitySetMapping Name="MBrands">
+      <EntityTypeMapping TypeName="princeshopModel.MBrand">
+        <MappingFragment StoreEntitySet="MBrand">
+          <ScalarProperty Name="MB_id" ColumnName="MB_id" />
+          <ScalarProperty Name="BrandTypeName" ColumnName="BrandTypeName" />
+          <ScalarProperty Name="BrandImageDesc" ColumnName="BrandImageDesc" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mcities">
+      <EntityTypeMapping TypeName="princeshopModel.Mcity">
+        <MappingFragment StoreEntitySet="Mcity">
+          <ScalarProperty Name="nCityID" ColumnName="nCityID" />
+          <ScalarProperty Name="sCity" ColumnName="sCity" />
+          <ScalarProperty Name="nStateID" ColumnName="nStateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mclients">
+      <EntityTypeMapping TypeName="princeshopModel.Mclient">
+        <MappingFragment StoreEntitySet="Mclient">
+          <ScalarProperty Name="MC_id" ColumnName="MC_id" />
+          <ScalarProperty Name="MU_id" ColumnName="MU_id" />
+          <ScalarProperty Name="CustomerFname" ColumnName="CustomerFname" />
+          <ScalarProperty Name="CustoemrLname" ColumnName="CustoemrLname" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="AlternateNumber" ColumnName="AlternateNumber" />
+          <ScalarProperty Name="PermanentAddress1" ColumnName="PermanentAddress1" />
+          <ScalarProperty Name="PerrmanentAddress2" ColumnName="PerrmanentAddress2" />
+          <ScalarProperty Name="PermanentAddress3" ColumnName="PermanentAddress3" />
+          <ScalarProperty Name="Staus" ColumnName="Staus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MProductTypes">
+      <EntityTypeMapping TypeName="princeshopModel.MProductType">
+        <MappingFragment StoreEntitySet="MProductType">
+          <ScalarProperty Name="MPT_id" ColumnName="MPT_id" />
+          <ScalarProperty Name="ProductTypeName" ColumnName="ProductTypeName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mstates">
+      <EntityTypeMapping TypeName="princeshopModel.Mstate">
+        <MappingFragment StoreEntitySet="Mstates">
+          <ScalarProperty Name="nStateID" ColumnName="nStateID" />
+          <ScalarProperty Name="sState" ColumnName="sState" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSuppliers">
+      <EntityTypeMapping TypeName="princeshopModel.MSupplier">
+        <MappingFragment StoreEntitySet="MSuppliers">
+          <ScalarProperty Name="MS_id" ColumnName="MS_id" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierAddress1" ColumnName="SupplierAddress1" />
+          <ScalarProperty Name="SupplierAddress2" ColumnName="SupplierAddress2" />
+          <ScalarProperty Name="SupplierAddress3" ColumnName="SupplierAddress3" />
+          <ScalarProperty Name="SupplierCity" ColumnName="SupplierCity" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MUsers">
+      <EntityTypeMapping TypeName="princeshopModel.MUser">
+        <MappingFragment StoreEntitySet="MUsers">
+          <ScalarProperty Name="MU_id" ColumnName="MU_id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserPwd" ColumnName="UserPwd" />
+          <ScalarProperty Name="MUT_id" ColumnName="MUT_id" />
+          <ScalarProperty Name="JoinDate" ColumnName="JoinDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MUserTypes">
+      <EntityTypeMapping TypeName="princeshopModel.MUserType">
+        <MappingFragment StoreEntitySet="MUserType">
+          <ScalarProperty Name="MUT_id" ColumnName="MUT_id" />
+          <ScalarProperty Name="UserTypeName" ColumnName="UserTypeName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MWarehouses">
+      <EntityTypeMapping TypeName="princeshopModel.MWarehouse">
+        <MappingFragment StoreEntitySet="MWarehouse">
+          <ScalarProperty Name="MW_ID" ColumnName="MW_ID" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="WarehouseAddress1" ColumnName="WarehouseAddress1" />
+          <ScalarProperty Name="WarehouseAddress2" ColumnName="WarehouseAddress2" />
+          <ScalarProperty Name="WarehouseAddress3" ColumnName="WarehouseAddress3" />
+          <ScalarProperty Name="nCityID" ColumnName="nCityID" />
+          <ScalarProperty Name="nStateID" ColumnName="nStateID" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TProductQties">
+      <EntityTypeMapping TypeName="princeshopModel.TProductQty">
+        <MappingFragment StoreEntitySet="TProductQty">
+          <ScalarProperty Name="nProductQtyID" ColumnName="nProductQtyID" />
+          <ScalarProperty Name="nProductID" ColumnName="nProductID" />
+          <ScalarProperty Name="nProductQty" ColumnName="nProductQty" />
+          <ScalarProperty Name="nWarehouseID" ColumnName="nWarehouseID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MProducts">
+      <EntityTypeMapping TypeName="princeshopModel.MProduct">
+        <MappingFragment StoreEntitySet="MProduct">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProductImageDecs" ColumnName="ProductImageDecs" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="MinProductQty" ColumnName="MinProductQty" />
+          <ScalarProperty Name="ProductQty" ColumnName="ProductQty" />
+          <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="MBt_id" ColumnName="MBt_id" />
+          <ScalarProperty Name="MPT_id" ColumnName="MPT_id" />
+          <ScalarProperty Name="MP_id" ColumnName="MP_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSupplierProductMaps">
+      <EntityTypeMapping TypeName="princeshopModel.MSupplierProductMap">
+        <MappingFragment StoreEntitySet="MSupplierProductMap">
+          <ScalarProperty Name="MP_id" ColumnName="MP_id" />
+          <ScalarProperty Name="MS_id" ColumnName="MS_id" />
+          <ScalarProperty Name="nmap_id" ColumnName="nmap_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TCarts">
+      <EntityTypeMapping TypeName="princeshopModel.TCart">
+        <MappingFragment StoreEntitySet="TCart">
+          <ScalarProperty Name="bstatus" ColumnName="bstatus" />
+          <ScalarProperty Name="nProductId" ColumnName="nProductId" />
+          <ScalarProperty Name="nUserId" ColumnName="nUserId" />
+          <ScalarProperty Name="nCartId" ColumnName="nCartId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TOrderAllocations">
+      <EntityTypeMapping TypeName="princeshopModel.TOrderAllocation">
+        <MappingFragment StoreEntitySet="TOrderAllocation">
+          <ScalarProperty Name="bStatus" ColumnName="bStatus" />
+          <ScalarProperty Name="nSupplierID" ColumnName="nSupplierID" />
+          <ScalarProperty Name="nClientID" ColumnName="nClientID" />
+          <ScalarProperty Name="nWarehouseID" ColumnName="nWarehouseID" />
+          <ScalarProperty Name="nOrderID" ColumnName="nOrderID" />
+          <ScalarProperty Name="nProcessOrderID" ColumnName="nProcessOrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MPayStatus">
+      <EntityTypeMapping TypeName="princeshopModel.MPayStatu">
+        <MappingFragment StoreEntitySet="MPayStatus">
+          <ScalarProperty Name="sPaymentType" ColumnName="sPaymentType" />
+          <ScalarProperty Name="nPaymentTypeID" ColumnName="nPaymentTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TOrders">
+      <EntityTypeMapping TypeName="princeshopModel.TOrder">
+        <MappingFragment StoreEntitySet="TOrders">
+          <ScalarProperty Name="bStatus" ColumnName="bStatus" />
+          <ScalarProperty Name="sCancel" ColumnName="sCancel" />
+          <ScalarProperty Name="dtCancel" ColumnName="dtCancel" />
+          <ScalarProperty Name="nPaytype" ColumnName="nPaytype" />
+          <ScalarProperty Name="dtDeliveryDate" ColumnName="dtDeliveryDate" />
+          <ScalarProperty Name="nDeliveryCharges" ColumnName="nDeliveryCharges" />
+          <ScalarProperty Name="nTaxAmount" ColumnName="nTaxAmount" />
+          <ScalarProperty Name="nAmount" ColumnName="nAmount" />
+          <ScalarProperty Name="nQty" ColumnName="nQty" />
+          <ScalarProperty Name="nProdutID" ColumnName="nProdutID" />
+          <ScalarProperty Name="nUserID" ColumnName="nUserID" />
+          <ScalarProperty Name="dtTrans" ColumnName="dtTrans" />
+          <ScalarProperty Name="sTNo" ColumnName="sTNo" />
+          <ScalarProperty Name="nTId" ColumnName="nTId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
